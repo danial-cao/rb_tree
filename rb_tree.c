@@ -344,7 +344,7 @@ rb_tree_node_t *rb_tree_remove(rb_tree_t *rb_tree, rb_tree_node_t *node)
 		old->right_child->parent_node = node;
 
 		/*node节点为old的孩子节点*/
-		if (node->parent_node->right_child == node)
+		if (old->right_child == node)
 			old->right_child = old;
 
 		if (node->parent_node->right_child == node)
